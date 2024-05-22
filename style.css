@@ -1,7 +1,108 @@
-#menu
-{
+body {
+	margin: 0;
+	font-family: Arial, sans-serif;
+}
+
+#menu {
 	position: fixed;
+	top: 0;
 	width: 100%;
-	height: 35px;
-	background: white;
+	background-color: #333;
+	color: #fff;
+	padding: 10px 0;
+	z-index: 1000; /* Ensure it stays above other content */
+}
+
+#menu ul {
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+	text-align: center;
+}
+
+#menu li {
+	display: inline-block;
+	margin-right: 20px;
+}
+
+#menu li a {
+	color: #fff;
+	text-decoration: none;
+}
+
+.section {
+	padding-top: 60px; /* Adjusted to accommodate the fixed menu */
+}
+
+.photo-gallery {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.photo-gallery img {
+    width: 200px; /* Adjust as needed */
+    height: auto;
+    margin: 10px; /* Add spacing between images */
+}
+
+
+/* Style for the "About Me" section */
+#about {
+    background-color: #f2f2f2;
+    padding: 20px;
+}
+
+/* Style for the "My Photos" section */
+#photos {
+    background-color: #e6f7ff;
+    padding: 20px;
+}
+
+/* Style for the "My Playlist" section */
+#playlist {
+    background-color: #ffe6cc;
+    padding: 20px;
+}
+
+/* Style for the "Like" section */
+#like {
+    background-color: #ffffcc;
+    padding: 20px;
+}
+
+/* Style for the "QR Code" section */
+#qrcoder {
+    background-color: #e6ffe6;
+    padding: 20px;
+}
+
+/* Style for the "Q&A" section */
+#spa {
+    background-color: #f5f5f5;
+    padding: 20px;
+}
+
+/* Style for the "Contact Me" section */
+#contact {
+    background-color: #d9d9d9;
+    padding: 20px;
+}
+
+/* Style for the sections */
+.section {
+    padding: 20px;
+    border-bottom: 1px solid #ccc; /* Add a solid border line at the bottom */
+}
+
+/* Remove the border from the last section */
+.section:last-child {
+    border-bottom: none;
+}
+
+/* Additional styles for the video container */
+.video-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
 }
