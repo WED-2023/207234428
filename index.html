@@ -19,9 +19,11 @@
     </div>
 
     <section id="about" class="section">
+      <section id="about" class="section">
         <h2>About Me</h2>
-        <!-- Your content here -->
+        Meet my grandparents, Sorin and Fifi Friedman. Sorin was born on February 28, 1937, in Romania. Fifi, whose original name is Sofiza, was born on January 4, 1938. They met at the University of Bucharest while getting their degrees in Electrical Engineering, and immediately fell in love. They got married and brought two beautiful girls, Miri and Keren, into the world. They made Aliyah to Israel in 1975 and lived in Ashkelon. Sorin worked at the Israeli Electric Company, and Fifi worked as a physics teacher. Today they live next to their two daughters in Givat Shmuel, traveling the world and having the time of their lives.
     </section>
+    
 
     <section id="photos" class="section">
         <h2>My Photos</h2>
@@ -53,14 +55,38 @@
           <!-- Example of embedded YouTube video -->
           <iframe width="560" height="315" src="https://www.youtube.com/embed/VHygTMF98Rw?si=L70rj11ikgYzBHgt" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>    </section>
 
-    <section id="like" class="section">
-        <h2>Like</h2>
-        <!-- Your content here -->
-    </section>
+          <section id="like" class="section">
+            <div class="section-content">
+                <br/>
+                <br/>
+                <br/>
+                <div class="section-title">
+                    <hr class="section-line">
+                    <h2>Give Me A Like</h2>
+                    <hr class="section-line">
+                </div>
+                <br/>
+                <div id="fb-root"></div>
+                <div class="fb-like-wrapper">
+                    <!-- Facebook Like button -->
+                    <!-- ><div class="fb-like" data-href="https://www.facebook.com/pages/%D7%A9%D7%92%D7%A8%D7%99%D7%A8%D7%95%D7%AA-%D7%A8%D7%95%D7%9E%D7%A0%D7%99%D7%94/245636338780517" data-width="" data-layout="button" data-action="like" data-size="small" data-share="false"></div>-->
+                    <!-- Transparent overlay button -->
+                    <button class="overlay-button" onclick="window.open('https://www.facebook.com/pages/%D7%A9%D7%92%D7%A8%D7%99%D7%A8%D7%95%D7%AA-%D7%A8%D7%95%D7%9E%D7%A0%D7%99%D7%94/245636338780517', '_blank');">Like</button>
+                </div>
+                
+                <!-- Facebook SDK -->
+                <div id="fb-root"></div>
+                <script async defer crossorigin="anonymous" src="https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v10.0" nonce="sOm3n0nc3"></script>
+                <br/>
+            </div>
+        </section>
+        
 
     <section id="qrcoder" class="section">
         <h2>QR Code</h2>
-        <!-- Your content here -->
+        <div class="qrcode-container">
+          <img src="QR_CODE.png" alt="QR Code" style="width: 200px; height: auto;">
+      </div>
     </section>
 
     <section id="spa" class="section">
@@ -76,27 +102,33 @@
       <p>Web3: Searching in the Web3 era would involve accessing decentralized platforms or applications built on blockchain technology. Users could access verified, tamper-proof records of medication data, including side effects, sourced directly from medical institutions, research studies, and patient records. Artificial intelligence algorithms might analyze this data to provide personalized recommendations and predictions based on individual health profiles. Privacy and data ownership would be safeguarded through cryptographic mechanisms, giving users more control over their health information.</p>
   </section>
 
-    <section id="contact" class="section">
-        <h2>Contact Me</h2>
-        <form action="mailto:gilagm@post.bgu.ac.il" method="post" enctype="text/plain">
-          <label for="sender-email">Your Email:</label><br>
-          <input type="email" id="sender-email" name="sender-email" required><br><br>
-          
-          <label for="message">Message:</label><br>
-          <textarea id="message" name="message" rows="4" cols="50" required></textarea><br><br>
-  
-          <label for="smiley">Choose a smiley:</label><br>
-          <select id="smiley" name="smiley">
-              <option value="😊">😊</option>
-              <option value="😄">😄</option>
-              <option value="😁">😁</option>
-              <option value="😆">😆</option>
-              <option value="😍">😍</option>
-          </select><br><br>
-          
-          <input type="submit" value="Send">
-      </form>
-    </section>
+  <section id="contact" class="section">
+    <h2>Contact Me</h2>
+    <form action="https://api.web3forms.com/submit" method="POST">
+        <input type="hidden" name="access_key" value="fb3976d1-236f-413d-baf4-0980adf00de9"> 
+        
+        <label for="sender-email">Your Email:</label><br>
+        <input type="email" id="sender-email" name="email" required><br><br>
+        
+        <label for="message">Message:</label><br>
+        <textarea id="message" name="message" rows="4" cols="50" required></textarea><br><br>
+        
+        <label for="smiley">Choose a smiley:</label><br>
+        <select id="smiley" name="smiley">
+            <option value="😊">😊</option>
+            <option value="😄">😄</option>
+            <option value="😁">😁</option>
+            <option value="😆">😆</option>
+            <option value="😍">😍</option>
+        </select><br><br>
+        
+        <!-- Honeypot for spam prevention -->
+        <input type="checkbox" name="botcheck" style="display:none;" value="">
+        
+        <button type="submit">Send</button>
+    </form>
+</section>
+
 
     <!-- JavaScript libraries -->
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
@@ -112,5 +144,26 @@
             });
         });
     </script>
+
+<style>
+  .fb-like-wrapper {
+      display: inline-block;
+  }
+
+  .overlay-button {
+      width: 100%;
+      padding: 10px 20px;
+      background-color: #4267B2;
+      color: white;
+      border: none;
+      cursor: pointer;
+      font-size: 16px;
+      border-radius: 5px;
+  }
+
+  .overlay-button:hover {
+      background-color: #365899;
+  }
+</style>
 </body>
 </html>
